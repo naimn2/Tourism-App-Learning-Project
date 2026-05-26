@@ -1,18 +1,14 @@
-package com.dicoding.tourismapp.core.ui.detail
+package com.dicoding.tourismapp.detail
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.IntentCompat.getParcelableExtra
-import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.dicoding.tourismapp.MyApplication
 import com.dicoding.tourismapp.R
-import com.dicoding.tourismapp.core.domain.model.Tourism
 import com.dicoding.tourismapp.databinding.ActivityDetailTourismBinding
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class DetailTourismActivity : AppCompatActivity() {
@@ -27,11 +23,11 @@ class DetailTourismActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar)
 
-        val detailTourism = getParcelableExtra(intent, EXTRA_DATA, Tourism::class.java)
+        val detailTourism = getParcelableExtra(intent, EXTRA_DATA, _root_ide_package_.com.dicoding.tourismapp.core.domain.model.Tourism::class.java)
         showDetailTourism(detailTourism)
     }
 
-    private fun showDetailTourism(detailTourism: Tourism?) {
+    private fun showDetailTourism(detailTourism: com.dicoding.tourismapp.core.domain.model.Tourism?) {
         detailTourism?.let {
             supportActionBar?.title = detailTourism.name
             binding.contentDetailTourism.tvDetailDescription.text = detailTourism.description

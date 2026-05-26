@@ -1,4 +1,4 @@
-package com.dicoding.tourismapp.core.ui.home
+package com.dicoding.tourismapp.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData

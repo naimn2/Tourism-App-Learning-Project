@@ -23,7 +23,7 @@
         </activity>
 
         <activity
-            android:name="com.dicoding.tourismapp.core.ui.detail.DetailTourismActivity"
+            android:name="com.dicoding.tourismapp.detail.DetailTourismActivity"
             android:label="@string/title_activity_detail_home"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>

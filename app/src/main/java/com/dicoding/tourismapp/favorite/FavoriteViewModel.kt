@@ -1,4 +1,4 @@
-package com.dicoding.tourismapp.core.ui.favorite
+package com.dicoding.tourismapp.favorite
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
@@ -7,6 +7,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class FavoriteViewModel @Inject constructor(tourismUseCase: TourismUseCase) : ViewModel() {
+class FavoriteViewModel @Inject constructor(tourismUseCase: com.dicoding.tourismapp.core.domain.usecase.TourismUseCase) : ViewModel() {
     val favoriteTourism = tourismUseCase.getFavoriteTourism().asLiveData()
 }
