@@ -14,6 +14,6 @@ abstract class AppModule {
 
     @Binds
     @ViewModelScoped
-    abstract fun provideTourismUseCase(tourismInteractor: com.dicoding.tourismapp.core.domain.usecase.TourismInteractor): com.dicoding.tourismapp.core.domain.usecase.TourismUseCase
+    abstract fun provideTourismUseCase(tourismInteractor: TourismInteractor): TourismUseCase
 
 }
